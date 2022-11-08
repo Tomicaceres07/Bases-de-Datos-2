@@ -10,7 +10,7 @@ FROM customer c
     INNER JOIN address ad ON sto.address_id = ad.address_id
     INNER JOIN city ci USING(city_id)
     INNER JOIN country co USING(country_id)
-WHERE co.country = 'Canada';
+WHERE co.country = 'Argentina';
 
 -- 2. Write a query that shows the film title, language and rating. Rating shall be shown as the full text described here: https://en.wikipedia.org/wiki/Motion_picture_content_rating_system#United_States. Hint: use case.
 SELECT

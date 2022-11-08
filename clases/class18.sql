@@ -31,7 +31,7 @@ DROP PROCEDURE IF EXISTS list_procedure $
 
 CREATE PROCEDURE list_procedure(
 	IN co_name VARCHAR(250), 
-	OUT list VARCHAR(500)
+	INOUT list VARCHAR(500)
 	) 
 BEGIN 
 	DECLARE finished INT DEFAULT 0;
@@ -60,7 +60,7 @@ BEGIN
 		END IF;
 
 		IF coun = co_name THEN
-			SET list = CONCAT(f_name,';',l_name);
+			SET list = CONCAT(f_name,' ', l_name, '; ', list);
 		END IF;
 		
 		
